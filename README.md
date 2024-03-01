@@ -1,0 +1,1 @@
+# gh-browse.nvim
