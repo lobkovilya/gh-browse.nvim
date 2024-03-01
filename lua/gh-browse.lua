@@ -9,7 +9,8 @@ function M.gh_browse()
     local relativePath = string.gsub(vim.api.nvim_buf_get_name(0), workdir, "")
     local row = unpack(vim.api.nvim_win_get_cursor(0))
 
-    os.execute("gh browse " .. relativePath .. ":" .. row)
+    cmd = "gh browse" .. relativePath .. ":" .. row
+    os.execute(cmd .. "&> /dev/null")
 end
 
 return M
