@@ -24,3 +24,26 @@ making it easier to reference or share your code.
 use {'lobkovilya/gh-browse.nvim'}
 ```
 
+### Using [vim-plug](https://github.com/junegunn/vim-plug)
+
+```
+Plug 'lobkovilya/gh-browse.nvim'
+```
+
+## Usage
+
+To use gh-browse.nvim, you can either call the Lua function directly or set up a key mapping in your Neovim configuration:
+
+```
+lua require('gh-browse').gh_browse()
+```
+
+For convenience, you may want to map this function to a keybinding. For example, to map it to `<leader>gh`:
+
+```lua
+vim.api.nvim_set_keymap('n', '<leader>gh', ':lua require("gh-browse").gh_browse()<CR>', {noremap = true, silent = true})
+```
+
+## License
+
+`gh-browse.nvim` is open-sourced software licensed under the MIT license.
